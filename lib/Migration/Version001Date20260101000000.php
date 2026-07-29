@@ -35,7 +35,7 @@ class Version001Date20260101000000 extends SimpleMigrationStep {
             $t->addColumn('id', Types::BIGINT, ['autoincrement' => true, 'notnull' => true]);
             $t->addColumn('email', Types::STRING, ['notnull' => true, 'length' => 255]);
             $t->addColumn('nc_uid', Types::STRING, ['notnull' => false, 'length' => 64]);
-            $t->addColumn('provisioned', Types::BOOLEAN, ['notnull' => true, 'default' => false]);
+            $t->addColumn('provisioned', Types::BOOLEAN, ['notnull' => false, 'default' => false]);
             $t->addColumn('created', Types::BIGINT, ['notnull' => true]);
             $t->setPrimaryKey(['id']);
             $t->addUniqueIndex(['email'], 'tb_usermap_email_ux');
@@ -46,7 +46,7 @@ class Version001Date20260101000000 extends SimpleMigrationStep {
             $t->addColumn('id', Types::BIGINT, ['autoincrement' => true, 'notnull' => true]);
             $t->addColumn('event_id', Types::STRING, ['notnull' => true, 'length' => 64]);
             $t->addColumn('received_at', Types::BIGINT, ['notnull' => true]);
-            $t->setPrimaryKey(['id']);
+            $t->setPrimaryKey(['id'], 'tb_dedupe_pk');
             $t->addUniqueIndex(['event_id'], 'tb_dedupe_eventid_ux');
         }
 
