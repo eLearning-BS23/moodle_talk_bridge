@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="screenshots/banner.png" width="820"
+       alt="Moodle Talk Bridge - a Moodle course activity becomes a Nextcloud Talk room, provisioned, rostered and signed in automatically">
+</p>
+
 # Moodle Talk Bridge
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](COPYING)
@@ -30,6 +35,13 @@ To request the plugin, or for installation and support enquiries, contact
   activity link from Moodle lands in the conversation already signed in.
 - Exposes a health endpoint backing the "Test connection" button on the
   Moodle side.
+
+## Screenshots
+
+| | |
+| --- | --- |
+| [![Overview](screenshots/thumbs/01-overview.png)](screenshots/01-overview.png) | [![How it works](screenshots/thumbs/02-how-it-works.png)](screenshots/02-how-it-works.png) |
+| [![Capabilities](screenshots/thumbs/03-capabilities.png)](screenshots/03-capabilities.png) | [![Set up](screenshots/thumbs/04-setup.png)](screenshots/04-setup.png) |
 
 ## Requirements
 

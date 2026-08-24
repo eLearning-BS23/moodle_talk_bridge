@@ -40,7 +40,7 @@ activity plugin (`mod_nextcloudtalk`) is supplied directly by Brain Station 23
 rather than through the Moodle plugins directory. To request the plugin, or for
 installation and support enquiries, contact **elearning@brainstation-23.com**.
     ]]></description>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <licence>agpl</licence>
     <author mail="elearning@brainstation-23.com">Brain Station 23</author>
     <namespace>MoodleTalkBridge</namespace>
@@ -48,6 +48,11 @@ installation and support enquiries, contact **elearning@brainstation-23.com**.
     <website>https://github.com/eLearning-BS23/moodle_talk_bridge</website>
     <bugs>https://github.com/eLearning-BS23/moodle_talk_bridge/issues</bugs>
     <repository type="git">https://github.com/eLearning-BS23/moodle_talk_bridge.git</repository>
+    <screenshot small-thumbnail="https://raw.githubusercontent.com/eLearning-BS23/moodle_talk_bridge/main/screenshots/thumbs/00-cover.png">https://raw.githubusercontent.com/eLearning-BS23/moodle_talk_bridge/main/screenshots/00-cover.png</screenshot>
+    <screenshot small-thumbnail="https://raw.githubusercontent.com/eLearning-BS23/moodle_talk_bridge/main/screenshots/thumbs/01-overview.png">https://raw.githubusercontent.com/eLearning-BS23/moodle_talk_bridge/main/screenshots/01-overview.png</screenshot>
+    <screenshot small-thumbnail="https://raw.githubusercontent.com/eLearning-BS23/moodle_talk_bridge/main/screenshots/thumbs/02-how-it-works.png">https://raw.githubusercontent.com/eLearning-BS23/moodle_talk_bridge/main/screenshots/02-how-it-works.png</screenshot>
+    <screenshot small-thumbnail="https://raw.githubusercontent.com/eLearning-BS23/moodle_talk_bridge/main/screenshots/thumbs/03-capabilities.png">https://raw.githubusercontent.com/eLearning-BS23/moodle_talk_bridge/main/screenshots/03-capabilities.png</screenshot>
+    <screenshot small-thumbnail="https://raw.githubusercontent.com/eLearning-BS23/moodle_talk_bridge/main/screenshots/thumbs/04-setup.png">https://raw.githubusercontent.com/eLearning-BS23/moodle_talk_bridge/main/screenshots/04-setup.png</screenshot>
     <dependencies>
         <php min-version="8.1"/>
         <nextcloud min-version="30" max-version="35"/>

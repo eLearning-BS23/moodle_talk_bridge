@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#22b5ff"/>
+      <stop offset="0.45" stop-color="#0082c9"/>
+      <stop offset="1" stop-color="#0b4d80"/>
+    </linearGradient>
+    <radialGradient id="sheen" cx="0.22" cy="0.1" r="0.9">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="0.55" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#031c2e" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="114" fill="url(#tile)"/>
+  <rect width="512" height="512" rx="114" fill="url(#sheen)"/>
+  <rect x="3" y="3" width="506" height="506" rx="111" fill="none" stroke="#ffffff" stroke-opacity="0.22" stroke-width="6"/>
+  <g transform="translate(72 80) scale(11.5)" filter="url(#soft)">
+    <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M6 2.5h20A4.5 4.5 0 0 1 30.5 7v11A4.5 4.5 0 0 1 26 22.5h-9.6l-6.8 5.9a1 1 0 0 1-1.6-.79V22.5H6A4.5 4.5 0 0 1 1.5 18V7A4.5 4.5 0 0 1 6 2.5Zm10 4.4L6.8 11.1 16 15.3l9.2-4.2L16 6.9Zm-4.5 6.35V17c0 1.25 2.02 2.25 4.5 2.25s4.5-1 4.5-2.25v-3.75L16 15.3l-4.5-2.05Zm12.9-.85h1.3v4.05a1.6 1.6 0 1 1-1.3 0V12.4Z"/>
+  </g>
+</svg>

@@ -5,6 +5,33 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2026-08-24
+
+### Fixed
+
+- Clean installs aborted during `occ app:enable`. Nextcloud runs its Oracle
+  constraint checks for apps that declare no `<database>` dependency, and two
+  rules were violated: `talkbridge_user_map.provisioned` was a `NOT NULL`
+  boolean, and `talkbridge_event_dedupe` (23 characters) relied on the default
+  primary-key name, which caps the table name at 22. The column is now nullable
+  and the key is named `tb_dedupe_pk`; both edits sit behind
+  `hasTable()` guards, so existing deployments are untouched.
+
+### Changed
+
+- New app icon: a redrawn monochrome `img/app.svg` that stays legible at 16 px
+  in the app menu and carries detail at store size, plus a colour brand logo at
+  `img/logo.svg`.
+- App Store listing artwork — a poster-style cover plus four screenshots, each
+  with a small thumbnail, declared in `appinfo/info.xml` and served from
+  `screenshots/`. Without them the store listing fell back to its generic
+  `no-screenshot.svg` placeholder; the cover is first because the store card
+  scales the whole image into a 200 px box, where a detail-heavy screenshot is
+  unreadable.
+- `.claude/`, `RELEASING.md` and `screenshots/` are excluded from the release
+  tarball. The staging step copies the working tree rather than tracked files,
+  so these were being packaged and hashed into `appinfo/signature.json`.
+
 ## [1.0.0] - 2026-07-28
 
 First public release.
@@ -23,4 +50,5 @@ First public release.
   the "Test connection" button in the Moodle plugin.
 - Replay protection via a nonce table and a webhook event de-duplication table.
 
+[1.0.1]: https://github.com/eLearning-BS23/moodle_talk_bridge/releases/tag/v1.0.1
 [1.0.0]: https://github.com/eLearning-BS23/moodle_talk_bridge/releases/tag/v1.0.0

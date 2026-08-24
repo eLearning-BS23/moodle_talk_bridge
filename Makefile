@@ -9,7 +9,8 @@ exclude=--exclude='.git' --exclude='.github' --exclude='.gitignore' \
         --exclude='tests' --exclude='phpunit.xml' \
         --exclude='.phpunit.result.cache' \
         --exclude='composer.json' --exclude='composer.lock' --exclude='vendor' \
-		--exclude='.claude' --exclude='RELEASING.md'
+        --exclude='.claude' --exclude='RELEASING.md' \
+        --exclude='screenshots'
 
 .PHONY: appstore clean
 
