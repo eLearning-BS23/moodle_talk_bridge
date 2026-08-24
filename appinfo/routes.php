@@ -15,5 +15,6 @@ return [
     'routes' => [
         ['name' => 'sso#redirect', 'url' => '/sso', 'verb' => 'GET'],
         ['name' => 'health#check', 'url' => '/health', 'verb' => 'GET'],
+        ['name' => 'settings#save', 'url' => '/settings/save', 'verb' => 'POST'],
     ],
 ];
