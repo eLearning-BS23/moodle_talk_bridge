@@ -30,8 +30,9 @@ Nextcloud credentials.
 - A dedicated bot account with an app password, plus the shared secret agreed
   with the Moodle instance.
 
-Configuration is applied with `occ config:app:set moodle_talk_bridge …`; there
-is no admin UI yet. See the README for the full list of keys.
+Configuration lives in **Administration settings → Moodle Talk Bridge**. Every
+key can still be applied with `occ config:app:set moodle_talk_bridge ...` for
+scripted and automated installs. See the README for the full list of keys.
 
 **Getting the Moodle plugin**
 
@@ -40,7 +41,7 @@ activity plugin (`mod_nextcloudtalk`) is supplied directly by Brain Station 23
 rather than through the Moodle plugins directory. To request the plugin, or for
 installation and support enquiries, contact **elearning@brainstation-23.com**.
     ]]></description>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <licence>agpl</licence>
     <author mail="elearning@brainstation-23.com">Brain Station 23</author>
     <namespace>MoodleTalkBridge</namespace>

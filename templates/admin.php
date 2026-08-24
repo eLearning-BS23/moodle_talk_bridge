@@ -4,8 +4,7 @@
 
     <form id="mtb-settings-form" method="post"
           action="<?php p(\OC::$server->getURLGenerator()->linkToRoute('moodle_talk_bridge.settings.save')); ?>">
-        <input type="hidden" name="requesttoken"
-               value="<?php p(\OC::$server->get(\OCP\Security\CSRF\CsrfTokenManager::class)->getToken()->getEncryptedValue()); ?>">
+        <input type="hidden" name="requesttoken" value="<?php p($_['requesttoken']); ?>">
 
         <p>
             <label for="mtb-nextcloud-url">Nextcloud URL</label><br>

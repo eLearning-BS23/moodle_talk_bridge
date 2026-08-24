@@ -5,6 +5,33 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.2] - 2026-08-24
+
+### Added
+
+- Admin configuration panel at **Administration settings → Moodle Talk Bridge**.
+  All six keys are editable in the browser; the two secrets are write-only and
+  render as placeholders, so leaving a secret field blank keeps the stored
+  value. Every key can still be applied with `occ` for scripted installs.
+
+### Fixed
+
+- The admin panel was unreachable as first merged. `appinfo/info.xml` declared
+  `OCA\MoodleTalkBridge\Settings\AdminSection`, but the class did not exist, so
+  the section never registered and the form — which targets that section id —
+  had no navigation entry to render under. `getAdminSections()` silently
+  omitted it, with nothing written to the log. Added the missing class.
+- Opening the panel threw `QueryNotFoundException`. `templates/admin.php`
+  resolved `OCP\Security\CSRF\CsrfTokenManager`, which does not exist in any
+  Nextcloud version — the class lives in the private `OC\Security\CSRF`
+  namespace. The template now uses the `requesttoken` value that
+  `OC\Template\Base` already assigns, which needs no container lookup.
+
+### Changed
+
+- The setup screenshot and the `info.xml` and `README.md` configuration
+  sections no longer state that there is no admin UI.
+
 ## [1.0.1] - 2026-08-24
 
 ### Fixed
@@ -50,5 +77,6 @@ First public release.
   the "Test connection" button in the Moodle plugin.
 - Replay protection via a nonce table and a webhook event de-duplication table.
 
+[1.0.2]: https://github.com/eLearning-BS23/moodle_talk_bridge/releases/tag/v1.0.2
 [1.0.1]: https://github.com/eLearning-BS23/moodle_talk_bridge/releases/tag/v1.0.1
 [1.0.0]: https://github.com/eLearning-BS23/moodle_talk_bridge/releases/tag/v1.0.0

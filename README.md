@@ -68,7 +68,12 @@ no runtime Composer dependencies.
 
 ## Configuration
 
-There is no admin UI yet; configuration is applied with `occ`.
+Set everything from **Administration settings → Moodle Talk Bridge**. The two
+secrets are write-only in the panel: they render as placeholders, and leaving a
+secret field blank keeps the stored value.
+
+Every key can also be applied with `occ`, which is the better route for scripted
+or automated installs.
 
 ```bash
 occ config:app:set moodle_talk_bridge shared_secret     --value="<32-byte hex>"
