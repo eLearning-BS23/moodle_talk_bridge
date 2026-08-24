@@ -57,4 +57,8 @@ installation and support enquiries, contact **elearning@brainstation-23.com**.
         <php min-version="8.1"/>
         <nextcloud min-version="30" max-version="35"/>
     </dependencies>
+    <settings>
+    <admin>OCA\MoodleTalkBridge\Settings\AdminSettings</admin>
+    <admin-section>OCA\MoodleTalkBridge\Settings\AdminSection</admin-section>
+</settings>
 </info>
