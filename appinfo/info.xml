@@ -5,46 +5,74 @@
     <name>Moodle Talk Bridge</name>
     <summary>Create and sync Nextcloud Talk rooms from Moodle course activities</summary>
     <description><![CDATA[
-Companion app for the Moodle **Nextcloud Talk Session** activity
-(`mod_nextcloudtalk`). It lets a Moodle course create a Talk room and drop
-teachers and students straight into it, without them needing separate
-Nextcloud credentials.
+Connect your Moodle courses to Nextcloud Talk. A teacher adds a **Nextcloud
+Talk Session** to a course, and everything else happens on its own: the
+conversation is created, the class is added to it, and everyone joins with a
+single click. No extra logins, no manual room admin.
 
-**What it does**
+**What your users get**
 
-- Receives HMAC-signed webhooks from Moodle and creates, updates or archives
-  the matching Talk conversation.
-- Provisions Nextcloud accounts for Moodle participants on first use and keeps
-  the room roster in sync with course enrolment.
-- Grants Moodle teachers moderator rights in the Talk room; students join as
-  regular participants.
-- Provides a signed single-use ticket endpoint so a user clicking the activity
-  link in Moodle lands in the conversation already signed in.
-- Exposes a health endpoint backing the "Test connection" button on the Moodle
-  side.
+- **One click into the meeting.** Teachers and students open the activity in
+  Moodle and land in the Talk conversation already signed in. There is no
+  second password to remember.
+- **Accounts created for them.** Course participants who do not yet have a
+  Nextcloud account get one automatically the first time they join.
+- **The right people, with the right rights.** Teachers become moderators,
+  students join as participants, and membership follows course enrolment — so
+  the room stays correct as the class changes.
+- **Rooms that follow the course.** A conversation is created when the
+  activity is added, renamed when the activity is renamed, and archived when
+  it is removed.
+- **Private by design.** Every exchange between Moodle and Nextcloud is signed
+  and verified, and only the Moodle sites you approve are accepted.
+
+**Setting it up**
+
+Everything is configured in your browser. No command line and no server access
+are required.
+
+1. Make sure **Nextcloud Talk** is installed and enabled.
+2. Install this app from **Apps → Integration**.
+3. Open **Administration settings → Moodle Talk Bridge** and complete the six
+   fields: your Nextcloud address, a shared secret, the account this app uses
+   and its app password, your Moodle address, and the Moodle sites allowed to
+   connect.
+4. Enter the same shared secret in the Moodle plugin, then use **Test
+   connection** there to confirm both halves are talking to each other.
+
+Secrets are write-only. Once saved they are never displayed again, and leaving
+a secret field blank keeps the value already stored.
 
 **Requirements**
 
-- **Nextcloud Talk (spreed) must be installed and enabled** — this app drives
-  it and does nothing on its own.
-- A dedicated bot account with an app password, plus the shared secret agreed
-  with the Moodle instance.
+- **Nextcloud Talk (spreed)** installed and enabled. This app drives Talk and
+  does nothing on its own.
+- A Nextcloud account dedicated to this app, with an app password.
+- The companion Moodle plugin, below, installed on your Moodle site.
 
-Configuration lives in **Administration settings → Moodle Talk Bridge**. Every
-key can still be applied with `occ config:app:set moodle_talk_bridge ...` for
-scripted and automated installs. See the README for the full list of keys.
+**You also need the Moodle plugin**
 
-**Getting the Moodle plugin**
+This app is the Nextcloud half of the integration. The matching Moodle
+activity plugin, **Nextcloud Talk for Moodle**, is published by Brain
+Station 23 and is available here:
 
-This app is only the Nextcloud half of the integration. The companion Moodle
-activity plugin (`mod_nextcloudtalk`) is supplied directly by Brain Station 23
-rather than through the Moodle plugins directory. To request the plugin, or for
-installation and support enquiries, contact **elearning@brainstation-23.com**.
+https://elearning23.com/nextcloud-talk-for-moodle/
+
+Both halves are required — neither works on its own. That page covers
+downloading the plugin, installing it and licensing.
+
+**Support**
+
+For installation help, a demo or any question, contact
+**elearning@brainstation-23.com**.
     ]]></description>
     <version>1.0.2</version>
     <licence>agpl</licence>
     <author mail="elearning@brainstation-23.com">Brain Station 23</author>
     <namespace>MoodleTalkBridge</namespace>
+    <documentation>
+        <admin>https://elearning23.com/nextcloud-talk-for-moodle/</admin>
+    </documentation>
     <category>integration</category>
     <website>https://github.com/eLearning-BS23/moodle_talk_bridge</website>
     <bugs>https://github.com/eLearning-BS23/moodle_talk_bridge/issues</bugs>
