@@ -5,6 +5,16 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.5] - 2026-08-25
+
+### Fixed
+
+- The Moodle plugin address and the support email were plain text in the App
+  Store listing, so neither was clickable — the store's Markdown renderer does
+  not autolink a bare URL or address. Both are now explicit Markdown links, and
+  the plugin is linked from the requirements list as well as from its own
+  section.
+
 ## [1.0.4] - 2026-08-25
 
 ### Changed
@@ -98,6 +108,7 @@ First public release.
   the "Test connection" button in the Moodle plugin.
 - Replay protection via a nonce table and a webhook event de-duplication table.
 
+[1.0.5]: https://github.com/eLearning-BS23/moodle_talk_bridge/releases/tag/v1.0.5
 [1.0.4]: https://github.com/eLearning-BS23/moodle_talk_bridge/releases/tag/v1.0.4
 [1.0.2]: https://github.com/eLearning-BS23/moodle_talk_bridge/releases/tag/v1.0.2
 [1.0.1]: https://github.com/eLearning-BS23/moodle_talk_bridge/releases/tag/v1.0.1

@@ -48,25 +48,26 @@ a secret field blank keeps the value already stored.
 - **Nextcloud Talk (spreed)** installed and enabled. This app drives Talk and
   does nothing on its own.
 - A Nextcloud account dedicated to this app, with an app password.
-- The companion Moodle plugin, below, installed on your Moodle site.
+- The companion Moodle plugin,
+  [Nextcloud Talk for Moodle](https://elearning23.com/nextcloud-talk-for-moodle/),
+  installed on your Moodle site.
 
 **You also need the Moodle plugin**
 
 This app is the Nextcloud half of the integration. The matching Moodle
 activity plugin, **Nextcloud Talk for Moodle**, is published by Brain
-Station 23 and is available here:
+Station 23. Download it, and read its installation guide, here:
 
-https://elearning23.com/nextcloud-talk-for-moodle/
+**[https://elearning23.com/nextcloud-talk-for-moodle/](https://elearning23.com/nextcloud-talk-for-moodle/)**
 
-Both halves are required — neither works on its own. That page covers
-downloading the plugin, installing it and licensing.
+Both halves are required — neither works on its own.
 
 **Support**
 
 For installation help, a demo or any question, contact
-**elearning@brainstation-23.com**.
+[elearning@brainstation-23.com](mailto:elearning@brainstation-23.com).
     ]]></description>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <licence>agpl</licence>
     <author mail="elearning@brainstation-23.com">Brain Station 23</author>
     <namespace>MoodleTalkBridge</namespace>
