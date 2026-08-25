@@ -5,6 +5,27 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.4] - 2026-08-25
+
+### Changed
+
+- App Store listing rewritten for a non-technical audience. It now leads with
+  what teachers and students experience, gives a four-step browser-only setup,
+  and no longer offers a command-line route — the `occ` keys stay documented in
+  the README, where the reader is an administrator.
+- The companion Moodle plugin is now named and linked
+  (<https://elearning23.com/nextcloud-talk-for-moodle/>) instead of only
+  pointing at an email address, and the same page is registered as the app's
+  admin documentation link.
+
+### Note on 1.0.3
+
+`v1.0.3` was tagged with the listing rewrite, but `appinfo/info.xml` still
+declared `1.0.2`. The App Store keys a release by that value rather than by the
+git tag, so the upload was accepted as a re-upload of 1.0.2 and the listing text
+was never refreshed. 1.0.3 was never published to the App Store; this release
+carries the same content under a version number the store will accept.
+
 ## [1.0.2] - 2026-08-24
 
 ### Added
@@ -77,6 +98,7 @@ First public release.
   the "Test connection" button in the Moodle plugin.
 - Replay protection via a nonce table and a webhook event de-duplication table.
 
+[1.0.4]: https://github.com/eLearning-BS23/moodle_talk_bridge/releases/tag/v1.0.4
 [1.0.2]: https://github.com/eLearning-BS23/moodle_talk_bridge/releases/tag/v1.0.2
 [1.0.1]: https://github.com/eLearning-BS23/moodle_talk_bridge/releases/tag/v1.0.1
 [1.0.0]: https://github.com/eLearning-BS23/moodle_talk_bridge/releases/tag/v1.0.0
