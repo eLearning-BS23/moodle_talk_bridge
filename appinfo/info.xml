@@ -66,7 +66,7 @@ downloading the plugin, installing it and licensing.
 For installation help, a demo or any question, contact
 **elearning@brainstation-23.com**.
     ]]></description>
-    <version>1.0.2</version>
+    <version>1.0.4</version>
     <licence>agpl</licence>
     <author mail="elearning@brainstation-23.com">Brain Station 23</author>
     <namespace>MoodleTalkBridge</namespace>
